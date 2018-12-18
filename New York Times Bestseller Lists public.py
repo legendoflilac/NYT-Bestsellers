@@ -1,9 +1,6 @@
 '''New York Times Bestseller Lists.py
-This project reduces the tedium of copying and pasting NYT Bestseller
-data from the website to a document template I fill out for work every two
-weeks. 
-
-
+This project reduces the amount of copying and pasting NYT Bestseller
+data from the website to a document template.
 '''
 
 
