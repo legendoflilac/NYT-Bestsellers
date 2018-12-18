@@ -48,9 +48,6 @@ def assign_tags(soup):
         title_text.append(title_tag[i].text)
         author_text.append(author_tag[i].text)
         desc_text.append(desc_tag[i].text.strip(" "))
-        #or if that doesnt work,
-        #desc_ready = desc_tag[i].text
-        #desc_text.append(desc_ready.strip(" ")
         fresh_text.append((fresh_tag[i].text.upper())[0:3])
         for j in "W ": #we don't need the extra "W" and " " that come with the slice
             if fresh_text[i] == "NEW": #but we don't want to accidentally mutate "NEW"
@@ -63,19 +60,16 @@ def assign_tags(soup):
 
 #looping to list streamlining--function or just do it?
 def make_doc(fresh_text, author_text, desc_text, title_text, publisher_text, table_no):
-    #this should be the blank template you are using
-    #this part is bad for table_no in range(0,3): #we know there are only 3 tables in the template--eventually change to be responsive to other potential types
     table = document.tables[table_no] #establish table number
     print(table_no)
 
     row_count = len(table.rows)
     for item in range(0, row_count-1):
         row = table.rows[item+1]
-        p = row.cells[3].paragraphs[0] #all cells have at least one paragraph
+        p = row.cells[3].paragraphs[0] #find first paragraph (all cells have at least one)
         #paragraph formatting
         p.style = "Normal"
         p.paragraph_format.space_after = Pt(0)
-
         #first runner content and formatting
         title = title_text[item]
         runner = p.add_run(title)
