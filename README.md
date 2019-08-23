@@ -1,7 +1,7 @@
 # NYT-Bestsellers Reworked
 A Python script for creating a Word document with data from three Bestseller lists--now using the New York Times API, found at https://developer.nytimes.com/.
 
-This update was necessary because of code changes on the NYT website. The old code can be used if updated with the correct selectors, but ultimately this script is faster and will likely have fewer issues running in the future.
+This update was necessary because of code changes on the NYT website. The old script can be used if updated with the correct selectors, but ultimately this one is faster and will likely have fewer issues running in the future.
 
 
 # Ideas for future improvements
