@@ -1,6 +1,9 @@
-'''New York Times Bestseller Lists.py
+'''
+DEPRECATED - use other file & NYT API found at https://developer.nytimes.com/
+New York Times Bestseller Lists.py
 This project reduces the amount of copying and pasting NYT Bestseller
 data from the website to a document template.
+
 '''
 
 
